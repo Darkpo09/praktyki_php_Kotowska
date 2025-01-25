@@ -1,0 +1,20 @@
+1. CREATE TABLE uczniowie_2c (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Unikalny identyfikator
+    imie VARCHAR(50) NOT NULL,
+    nazwisko VARCHAR(50) NOT NULL,
+    numer_w_dzienniku INT NOT NULL UNIQUE,
+    zachowanie ENUM('naganne', 'nieodpowiednie', 'poprawne', 'dobre', 'bardzo dobre', 'wzorowe') NOT NULL,
+    srednia_koncowa DECIMAL(4,2) NOT NULL
+);
+
+
+2.INSERT INTO uczniowie_2c (imie, nazwisko, numer_w_dzienniku, zachowanie, srednia_koncowa)
+VALUES
+('Jan', 'Kowalski', 1, 'wzorowe', 4.75),
+('Anna', 'Nowak', 2, 'bardzo dobre', 4.50),
+('Piotr', 'Wiśniewski', 3, 'dobre', 3.75),
+('Katarzyna', 'Zielińska', 4, 'poprawne', 3.20),
+('Tomasz', 'Mazur', 5, 'nieodpowiednie', 2.85);
+
+
+3. SELECT * FROM uczniowie_2c;
