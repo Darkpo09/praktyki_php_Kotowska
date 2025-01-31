@@ -1,111 +1,10 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-?>
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dod_ocene.css">
     <title>Dodaj ocenę</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color:rgb(107, 146, 155);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #333;
-        }
-
-        .container {
-            background-color: #BBD1EA;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 480px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #507DBC;
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        label {
-            font-size: 18px;
-            color: #507DBC;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        select, input[type="number"] {
-            width: 95%;
-            padding: 12px;
-            margin-bottom: 25px;
-            border: 2px solid #507DBC;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-
-        select:focus, input[type="number"]:focus {
-            border-color: #A1C6EA;
-            outline: none;
-        }
-
-        button {
-            width: 100%;
-            padding: 14px;
-            background-color: #A1C6EA;
-            color: white;
-            font-size: 18px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            letter-spacing: 1px;
-        }
-
-        button:hover {
-            background-color: #507DBC;
-        }
-
-        .message {
-            font-size: 18px;
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        .success {
-            color: #388e3c;
-            background-color: #c8e6c9;
-        }
-
-        .error {
-            color: #d32f2f;
-            background-color: #FFC1C1;
-        }
-
-        .message a {
-            color: #507DBC;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .message a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -114,6 +13,9 @@ ini_set('display_errors', 1);
             <label for="uczen">Wybierz ucznia:</label>
             <select name="uczen" id="uczen" required>
                 <?php
+                error_reporting(E_ALL);
+                ini_set('display_errors', 1);
+
                 // Połączenie z bazą danych
                 $host = 'localhost';
                 $db = 'praktyki_3';
@@ -168,6 +70,10 @@ ini_set('display_errors', 1);
             $conn->close();
         }
         ?>
+
+
     </div>
+
+    <a href="index.php" class="powrot">Powrót do strony głównej</a>
 </body>
 </html>

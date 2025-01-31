@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #0E3B43;
+    text-align: center;
+    color: #A3BBAD;
+}
+.student {
+    border: 2px dotted #A3BBAD;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #357266;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+.student h3 {
+    margin: 0 0 5px;
+    color: #A3BBAD;
+}
+.student p {
+    margin: 5px 0;
+}
